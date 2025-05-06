@@ -1,0 +1,10 @@
+.title {
+    text-align: center;
+}
+
+.title-underline {
+    background-color: var(--primary-500);
+    width: 7rem;
+    height: 0.25rem;
+    margin: 0 auto;
+}

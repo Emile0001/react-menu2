@@ -1,0 +1,377 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+} /*16px*/
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+:root {
+    --primary-100: #f0f4ff;
+    --primary-200: #c2d1ff;
+    --primary-300: #94a3ff;
+    --primary-400: #64748b;
+    --primary-500: #334155;
+    --primary-600: #1e293b;
+    --primary-700: #0f172a;
+    --white: #ffffff;
+    --black: #000000;
+    --grey-100: #f8fafc;
+    --grey-200: #e2e8f0;
+    --grey-300: #cbd5e1;
+    --grey-400: #94a3b8;
+    --grey-500: #64748b;
+    --grey-600: #475569;
+    --grey-700: #334155;
+    --grey-800: #1e293b;
+    --grey-900: #0f172a;
+
+    /* font-size */
+    --small-text: 0.75rem; /*12px*/
+    --medium-text: 0.875rem; /*14px*/
+    --large-text: 1rem; /*16px*/
+
+    /* rest of the colors */
+    --red-light: #f8d7da;
+    --red-dark: #842029;
+    --green-light: #d1e7dd;
+    --green-dark: #0f5132;
+
+    /* rest of the vars */
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-900);
+    --borderRadius: 0.25rem;
+    --letterSpacing: 1px;
+    --transition: 0.3s ease-in-out all;
+    --max-width: 1120px;
+    --fixed-width: 600px;
+
+    /* box shadow*/
+    --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+body {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem; /*16px*/
+    line-height: 1.5;
+    letter-spacing: var(--letterSpacing);
+    transition: var(--transition);
+}
+p {
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+}
+h1 {
+    font-size: 2rem; /*32px*/
+}
+h2 {
+    font-size: 1.5rem; /*24px*/
+}
+h3 {
+    font-size: 1.25rem; /*20px*/
+}
+h4 {
+    font-size: 1.125rem; /*18px*/
+}
+h5 {
+    font-size: 1rem; /*16px*/
+}
+h6 {
+    font-size: 0.875rem; /*14px*/
+}
+
+.text {
+    margin-bottom: 1.5rem;
+    max-width: 40em;
+}
+small,
+.text-small {
+    font-size: var(--small-text);
+}
+.text-medium {
+    font-size: var(--medium-text);
+}
+.text-large {
+    font-size: var(--large-text);
+}
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.img {
+    width: 100%;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-cover {
+    object-fit: cover;
+}
+.img-contain {
+    object-fit: contain;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borderRadius);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.btn:hover {
+    box-shadow: var(--shadow-3);
+}
+.btn-hipster {
+    color: var(--primary-500);
+    background: var(--primary-200);
+}
+.btn-hipster:hover {
+    color: var(--primary-200);
+    background: var(--primary-700);
+}
+.btn-block {
+    width: 100%;
+}
+.btn-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-small {
+    font-size: var(--small-text);
+}
+.btn-large {
+    font-size: var(--large-text);
+}
+.btn-primary {
+    color: var(--white);
+    background: var(--primary-500);
+}
+.btn-primary:hover {
+    background: var(--primary-700);
+}
+.btn-danger {
+    color: var(--white);
+    background: var(--red-dark);
+}
+.btn-danger:hover {
+    background: var(--red-light);
+}
+.alert {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--borderRadius);
+}
+.alert-danger {
+    color: var(--red-dark);
+    background: var(--red-light);
+}
+.alert-success {
+    color: var(--green-dark);
+    background: var(--green-light);
+}
+.alert-warning {
+    color: var(--yellow-dark);
+    background: var(--yellow-light);
+}
+.alert-info {
+    color: var(--blue-dark);
+    background: var(--blue-light);
+}
+.alert-primary {
+    color: var(--primary-500);
+    background: var(--primary-200);
+}
+.alert-secondary {
+    color: var(--grey-500);
+    background: var(--grey-200);
+}
+.alert-light {
+    color: var(--white);
+    background: var(--grey-100);
+}
+.alert-dark {
+    color: var(--black);
+    background: var(--grey-900);
+}
+/* form */
+.form {
+    width: 90vw;
+    max-width: var(--fixed-width);
+    background: var(--white);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow-2);
+    padding: 2rem 2.5rem;
+    margin: 3rem auto;
+}
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--medium-text);
+    font-weight: 500;
+}
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
+.form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
+.form-select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
+.form-checkbox {
+    width: 1rem;
+    height: 1rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-checkbox:checked {
+    background: var(--primary-500);
+}
+.form-checkbox:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
+.form-radio {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-radio:checked {
+    background: var(--primary-500);
+}
+.form-radio:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
+.form-row {
+    margin-bottom: 1rem;
+}
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-row .form-group {
+    flex: 1;
+    margin-right: 1rem;
+}
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+.form-row .form-group label {
+    margin-bottom: 0.5rem;
+}
+.form-row .form-group input,
+.form-row .form-group select,
+.form-row .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-300);
+    font-size: var(--medium-text);
+    font-weight: 500;
+    color: var(--textColor);
+    background: var(--white);
+    transition: var(--transition);
+}
+.form-row .form-group input:focus,
+.form-row .form-group select:focus,
+.form-row .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25);
+}
