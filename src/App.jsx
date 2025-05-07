@@ -3,6 +3,7 @@ import "./App.css";
 import menu from "./data";
 import Title from "./components/Title/Title";
 import Menu from "./components/Menu/Menu";
+import Categories from "./components/Categories/Categories";
 
 // const tempCategories = menu.map((item) => item.category);
 // const tempSet = new Set(tempCategories);
@@ -19,6 +20,9 @@ function App() {
         <main>
             <section>
                 <Title text="Menu" />
+            </section>
+            <section>
+                <Categories categories={categories} key={categories} />
             </section>
             <section>
                 <Menu menuItems={menuItems} />
