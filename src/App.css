@@ -158,6 +158,7 @@ ul {
     text-align: center;
     text-decoration: none;
     transition: var(--transition);
+    margin: 1rem;
 }
 .btn:hover {
     box-shadow: var(--shadow-3);

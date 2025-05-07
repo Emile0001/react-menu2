@@ -14,7 +14,15 @@ const allCategories = ["all", ...new Set(menu.map((item) => item.category))];
 function App() {
     const [menuItems, setMenuItems] = useState(menu);
     const [categories, setCategories] = useState(allCategories);
-    console.log(categories);
+
+    const filteredCategories = (category) => {
+        if (category === "all") {
+            setMenuItems(menu);
+            return;
+        }
+        const filteredMenu = menu.filter((item) => item.category === category);
+        setMenuItems(filteredMenu);
+    };
 
     return (
         <main>
@@ -22,7 +30,10 @@ function App() {
                 <Title text="Menu" />
             </section>
             <section>
-                <Categories categories={categories} key={categories} />
+                <Categories
+                    categories={categories}
+                    filteredCategories={filteredCategories}
+                />
             </section>
             <section>
                 <Menu menuItems={menuItems} />
